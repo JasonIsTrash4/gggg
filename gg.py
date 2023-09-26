@@ -1,20 +1,44 @@
-#имя
-#предмет с собой
-#какой либо выбор
-name = ('террорист в кс')
-print(name)
-game = int(input('введите 1,чтобы начать.2,чтобы не играть:'))
-if game == 1:
-    print('погнали')
-elif game >= 2:
-    print('до скорых встреч!')
-if game == 1:
-   money = 0
-   print(money,'денег')
-gun = int(input('первый раунд начинается,что купишь?1-броня,2-дигл'))
-if gun == 1:
-    print('ты с командой успешно запушил б и выиграл раунд')
-   
+"""
+TODO:
+проверка центральной и правой дороги,не показывать текст камни когда
+ты проехал по дороге
 
+"""
+
+name ='Илья Муромец'
+
+
+way_left = False
+way_center = False
+way_right = False
+
+while way_left == False or way_center == False or way_right == False:
+  print('надпись:')
+  print('налево поехать убитым быть,')
+  print('прямо поехать богатым быть,')
+  print('направо поехать женатым быть,')
+
+  way = input('в какую сторону ехать? ')
+  if way == 'налево':
+      if way_left == False:
+        print(name, 'убит')
+        way_left = True
+      else:
+        print(name,'уже был тут')
+  elif way == 'прямо':
+      if way_center == False:
+          print()
+     print(name,'богат')
+     way_center = True
+  elif way == 'направо':
+     print(name,'женат')
+     way_right = True
+  else:
+     print('Нет такой дороги')
+     
+print('конец игры')
+     
+    
+   
 
     
